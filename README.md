@@ -1,32 +1,30 @@
 # Steven Naumov
 ### Systems Architect & Lead Backend Engineer
 
-I engineer high-performance, registrar-grade backend systems with a focus on data integrity, 
-geospatial telemetry, and mission-critical reliability.
+I engineer high-performance, registrar-grade backend systems with a focus on data integrity, geospatial telemetry, and mission-critical reliability.
 
 ---
 
-## 🛠 Currently Architecting: V14 Composable Commerce OS
+## 🛠 Currently Architecting: V15 Composable Commerce OS
 **Status:** Proprietary / Closed Source (Commercial Potential)
-**Stack:** .NET 10 (LTS), PostgreSQL (TimescaleDB + PostGIS), gRPC, SignalR, Redis
+**Architectural Specification:** [View the Public Architecture & Schema Docs](https://github.com/3steve3/v15_architecture_spec/tree/main)
 
-V14 is a headless, modular commerce engine designed for sub-millisecond transactional 
-latency and zero-copy data ingestion. 
+V15 is a headless, multi-tenant, composable operating system designed for high-integrity verticals like field services, automotive, and warehouse management. The architecture is engineered for sub-millisecond transactional latency and zero-copy data ingestion pipelines.
 
 ### Key Architectural Pillars:
-* **Memory Optimization:** Utilizing `ReadOnlySpan<T>` and `RecyclableMemoryStream` for zero-allocation ingestion pipelines.
-* **Data-Oriented Design:** Leveraging C# 14 structs and devirtualized switch-based logic to maximize CPU cache locality.
-* **Geospatial Integrity:** High-precision tracking using PostGIS spatial clustering.
-* **Security First:** Built-in PII isolation and compliance-ready account purging logic (Apple 5.1.1v compliant).
+* **Database-Level Security:** Enforcing multi-tenancy and data segregation via PostgreSQL Row Level Security (RLS).
+* **Immutable Auditing:** Leveraging TimescaleDB hypertables for an append-only, tamper-proof audit trail of every state change.
+* **Data-Oriented Performance:** Utilizing .NET 10/C# 14 structs and devirtualized logic to maximize CPU cache locality and minimize GC pressure.
+* **Hybrid API Gateway:** Combining the strict performance of internal gRPC services with a flexible, public-facing GraphQL API for client applications.
 
 ---
 
 ## 🚀 Professional Expertise
 * **Languages:** C# (.NET 10), SQL (Postgres/Timescale), Python, Rust (Learning), C++
-* **Architectures:** Microservices, Event-Driven Architecture, Vertical Slice, B2B2C Multi-tenancy
-* **Infrastucture:** AWS (EC2, S3, RDS), ARM64 (Graviton) Optimization, Linux/Windows Server
+* **Architectures:** Microservices, Event-Driven Architecture (Transactional Outbox), Vertical Slice, B2B2C Multi-tenancy
+* **Infrastructure:** AWS (EC2, S3, RDS), ARM64 (Graviton) Optimization, Linux/Windows Server, Docker
 
 ---
 
 ## 📬 Contact
-[LinkedIn](https://www.linkedin.com/in/steve-naumov/) | [Email](stevennaumov@outlook.com)
+[LinkedIn](https://www.linkedin.com/in/steve-naumov/) | [Email](mailto:stevennaumov@outlook.com)
