@@ -19,17 +19,27 @@ HIRTP-Link (High-Integrity Resumable Transfer Protocol) is an application-layer 
 
 ---
 
-## 🛠 Currently Architecting: V15 Composable Commerce OS
-**Status:** Proprietary / Closed Source (Commercial Potential)
-**Architectural Specification:** [View the Public Architecture & Schema Docs](https://github.com/3steve3/v15_architecture_spec/tree/main)
+## 🛠 Currently Architecting: Bedrock (V16)
 
-V15 is a headless, multi-tenant, composable operating system designed for high-integrity verticals like field services, automotive, and warehouse management. The architecture is engineered for sub-millisecond transactional latency and zero-copy data ingestion pipelines.
+**Status:** Proprietary / Commercial OS for Field Services & Logistics  
+**Stack:** .NET 10 • PostgreSQL 18 • TimescaleDB • Angular  
 
-### Key Architectural Pillars:
-* **Database-Level Security:** Enforcing multi-tenancy and data segregation via PostgreSQL Row Level Security (RLS).
-* **Immutable Auditing:** Leveraging TimescaleDB hypertables for an append-only, tamper-proof audit trail of every state change.
-* **Data-Oriented Performance:** Utilizing .NET 10/C# 14 structs and devirtualized logic to maximize CPU cache locality and minimize GC pressure.
-* **Hybrid API Gateway:** Combining the strict performance of internal gRPC services with a flexible, public-facing GraphQL API for client applications.
+Bedrock is a high-integrity, composable commerce operating system designed to track "True Profit" by treating operational friction as first-class data. The architecture is a horizontally scalable modular monolith engineered for forensic data accuracy and auditability.
+
+### Key Architectural Pillars
+
+**Hybridized Vertical Slice Architecture (VSA):**  
+A modular monolith design that groups related commands and queries into cohesive feature slices, preventing the complexity of premature microservices while maintaining strict logical boundaries.
+
+**Segregated Transport Layer (CQRS-Lite):**  
+- **Commands (Writes):** All state changes are enforced via gRPC for strict contract adherence, high-performance serialization, and transactional rigor.  
+- **Queries (Reads):** Data retrieval is exposed via GraphQL, allowing clients to fetch complex, nested projections in a single round-trip without over-fetching.
+
+**Forensic Audit Trail:**  
+Leveraging TimescaleDB hypertables to create an immutable, append-only ledger of every system event. We don't just track current state; we track the delta of every business decision.
+
+**Database-Level Multitenancy:**  
+Deeply integrated PostgreSQL Row Level Security (RLS) ensures strict tenant isolation at the data layer, preventing application-level leakage.
 
 ---
 
