@@ -19,7 +19,7 @@ HIRTP-Link (High-Integrity Resumable Transfer Protocol) is an application-layer 
 
 ---
 
-## 🛠 Currently Architecting: Bedrock (V16)
+## 🛠 Currently Architecting: Bedrock (v15)
 
 **Status:** Proprietary / Commercial OS for Field Services & Logistics  
 **Stack:** .NET 10 • PostgreSQL 18 • TimescaleDB • Angular  
